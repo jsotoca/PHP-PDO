@@ -1,0 +1,9 @@
+{
+    "name": "php-pdo/pdo",
+    "description": "Utilizando PDO en PHP para la conexión de la DB",
+    "autoload": {
+        "psr-4": {
+            "src\\" : "src/"
+        }
+    }
+}
