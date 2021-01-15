@@ -22,6 +22,8 @@ class ComposerStaticInit044ffe3324fe0b99888f4f7e09fdd4b7
 
     public static $classMap = array (
         'src\\database\\DBProvider' => __DIR__ . '/../..' . '/src/database/dbprovider.php',
+        'src\\models\\Product' => __DIR__ . '/../..' . '/src/models/product.model.php',
+        'src\\services\\ProductService' => __DIR__ . '/../..' . '/src/services/product.service.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

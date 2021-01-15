@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'src\\database\\DBProvider' => $baseDir . '/src/database/dbprovider.php',
+    'src\\models\\Product' => $baseDir . '/src/models/product.model.php',
+    'src\\services\\ProductService' => $baseDir . '/src/services/product.service.php',
 );

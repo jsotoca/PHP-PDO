@@ -8,7 +8,7 @@ class DBProvider {
 
         private static $_db;
 
-        public static function get() {
+        public static function get() : PDO {
 
             if(!self::$_db){
             
