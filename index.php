@@ -4,7 +4,11 @@
     require_once "config.php";
 
     use src\services\ProductService;
+    use src\models\Product;
 
     $productService = new ProductService();
-    // var_dump($productService->getAll());
-    var_dump($productService->get(1));
+    $product = new Product();
+    $product->name = "Jujutsu Kaisen";
+    $product->price = 666.666;
+    $productService->created($product);
+    var_dump($productService->getAll());

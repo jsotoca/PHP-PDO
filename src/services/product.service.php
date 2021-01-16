@@ -46,4 +46,23 @@
             return $result;
         }
 
+        public function created(Product $product) : void {
+            $now = date("Y-m-d H:i:s");
+
+            try {
+                $stm = $this->_db->prepare("
+                    INSERT INTO products(name, price, created_at, updated_at ) 
+                    VALUES(:name, :price, :created_at, :updated_at)
+                ");
+                $stm->execute([
+                    'name' => $product->name,
+                    'price' => $product->price,
+                    'created_at' => $now,
+                    'updated_at' => $now,
+                ]);
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+
     }
