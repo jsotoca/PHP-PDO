@@ -7,8 +7,10 @@
     use src\models\Product;
 
     $productService = new ProductService();
-    $product = new Product();
-    $product->name = "Jujutsu Kaisen";
-    $product->price = 666.666;
-    $productService->created($product);
+    // $product = new Product();
+    // $product->id = 8;
+    // $product->name = "Black Clover";
+    // $product->price = 999.999;
+    // $productService->updated($product);
+    var_dump($productService->delete(8));
     var_dump($productService->getAll());

@@ -65,4 +65,33 @@
             }
         }
 
+        public function updated(Product $product) : void {
+            $now = date('Y-m-d H:i:s');
+            try {
+                $stm = $this->_db->prepare("
+                UPDATE products SET name = :name, price = :price, updated_at = :updated_at
+                WHERE id = :id
+                ");
+                $stm->execute([
+                    'id' => $product->id,
+                    'name' => $product->name,
+                    'price' => $product->price,
+                    'updated_at' => $now,
+                ]);
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+        
+        public function delete(int $id) : void {
+            try {
+                $stm = $this->_db->prepare("DELETE FROM products WHERE id = :id");
+                $stm->execute([
+                    'id' => $id
+                ]);
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+
     }
