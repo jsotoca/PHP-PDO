@@ -22,7 +22,10 @@ class ComposerStaticInit044ffe3324fe0b99888f4f7e09fdd4b7
 
     public static $classMap = array (
         'src\\database\\DBProvider' => __DIR__ . '/../..' . '/src/database/dbprovider.php',
+        'src\\models\\Order' => __DIR__ . '/../..' . '/src/models/order.model.php',
+        'src\\models\\OrderDetail' => __DIR__ . '/../..' . '/src/models/order_detail.model.php',
         'src\\models\\Product' => __DIR__ . '/../..' . '/src/models/product.model.php',
+        'src\\services\\OrderService' => __DIR__ . '/../..' . '/src/services/order.service.php',
         'src\\services\\ProductService' => __DIR__ . '/../..' . '/src/services/product.service.php',
     );
 
